@@ -6,5 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'App';
+
+
+  showButton = true;
+  hideButton = false;
+
+	showGreeting(event) {
+		console.log(event);
+		console.log("I AM showGreeting");
+		this.title = 'Anubhav';
+		this.showButton = false;
+		this.hideButton = true;
+	}
+
+	hideGreeting(event) {
+		console.log(event);
+		console.log("I AM hideGreeting");
+		this.title = 'App';
+		this.showButton = true;
+		this.hideButton = false;
+	}
+
 }
